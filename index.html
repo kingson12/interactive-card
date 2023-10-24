@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interactive card form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <!-- <img class="bg" src="img/Group 10.png" /> -->
+        <img class="card-img" src="img/Group 16.png" />
+      </div>
+
+      <div class="right-side">
+        <div class="card-name">
+          <label for="holdername" class="name">CARDHOLDER NAME</label>
+          <input
+            class="field cardname"
+            type="text"
+            required
+            placeholder="Janes Applesseed"
+            id="field"
+          />
+          <p id="messagename">Can't be blank</p>
+        </div>
+
+        <div class="card-name card-num">
+          <label for="holdername" class="name">CARD NUMBER</label>
+          <input
+            class="field number"
+            type="number"
+            required
+            maxlength="12"
+            minlength="12"
+            placeholder="1234 5678 9123 0000"
+            id="field"
+          />
+          <p id="messagenumber">Can't be blank</p>
+        </div>
+        <div class="date-cvc">
+          <div class="month-year">
+            <label for="month-year"
+              >EXP. DATE (MM/YY )
+
+              <input
+                class="exp"
+                type="text"
+                placeholder="MM"
+                maxlength="2"
+                max="12"
+                required
+                id="field"
+              />
+              <input
+                class="exp"
+                type="text"
+                placeholder="YY"
+                maxlength="2"
+                min="20"
+                required
+                id="field"
+              />
+              <p id="messageexp">Can't be blank</p>
+            </label>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input
+              class="cvcnumber"
+              type="text"
+              placeholder="367"
+              maxlength="3"
+              id="field"
+              required
+            />
+            <p id="messagecvc">Can't be blank</p>
+          </div>
+        </div>
+
+        <button type="submit" id="button">Confirm</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
